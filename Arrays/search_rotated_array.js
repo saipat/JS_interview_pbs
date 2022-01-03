@@ -36,3 +36,12 @@ console.log("Key(6) found at: " + binarySearchRotated(v1, 6));
 let v2 = [4, 5, 6, 1, 2, 3];
 console.log("Key(3) found at: " + binarySearchRotated(v2, 3));
 console.log("Key(6) found at: " + binarySearchRotated(v2, 6));
+
+
+// Runtime complexity #
+// The runtime complexity of this solution is logarithmic, O(log \space n)O(log n).
+//
+// Memory complexity #
+// The memory complexity of this solution is logarithmic, O(log \space n)O(log n).
+//
+// The solution is essentially a binary search but with some modifications. If we look at the array in the example closely, we notice that at least one half of the array is always sorted. We can use this property to our advantage. If the number nn lies within the sorted half of the array, then our problem is a basic binary search. Otherwise, discard the sorted half and keep examining the unsorted half. Since we are partitioning the array in half at each step, this gives us O(log \space n)O(log n) runtime complexity.
