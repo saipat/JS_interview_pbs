@@ -13,7 +13,6 @@ let balancedParanthesis = function (str){
 
     }else{
       let lastElement = stack.pop();
-      console.log(lastElement)
       if(str[i] !== map[lastElement]) {
         return false;
       }
@@ -26,3 +25,4 @@ let balancedParanthesis = function (str){
 }
 
 console.log(balancedParanthesis("{[]()}"))
+console.log(balancedParanthesis("{[](}"))
